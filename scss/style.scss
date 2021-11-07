@@ -32,6 +32,10 @@ footer, .header__button {
     }
 
     &__nav-menu {
+        display:none;
+    }
+
+    &__nav-menu-display {
         position:absolute;
         top:65px;
         width: 87.5vw;
@@ -67,6 +71,10 @@ footer, .header__button {
 
     &__nav-item-list {
         display:none;
+    }
+
+    &__nav-item-list-display {
+        display:block;
         margin: 2.4rem;
         line-height:2.8rem;
         background:hsla(237, 17%, 21%, 0.08);
@@ -75,20 +83,16 @@ footer, .header__button {
         border-radius: 5px;
     }
 
-    &__nav-item-list-display {
-        display:block;
-    }
-
 /*     &__nav-item:last-child &__nav-item-list {
         display: block;
     } */
 
-    &__nav-item-list li {
+    &__nav-item-list-display li {
         list-style: none;
         margin-bottom:1.2rem;
     }
 
-    &__nav-item-list li a {
+    &__nav-item-list-display li a {
         color:hsla(209, 48%, 24%, 0.75);
     }
 
