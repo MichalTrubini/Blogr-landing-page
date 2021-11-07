@@ -42,17 +42,32 @@ footer, .header__button {
         padding: 2.4rem 0 3.2rem;
     }
 
+    &__nav-item {
+        margin-bottom:2.4rem;
+    }
+
+    &__nav-item-header {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__nav-item-arrow {
+        position: relative;
+        top:-2px;
+    }
+
     &__nav-item-heading {
         
         font-size:1.8rem;
         font-weight:600;
-        margin-bottom: 2.4rem;
         line-height:2.8rem;
+        margin-right:0.8rem;
     }
 
     &__nav-item-list {
         display:none;
-        margin: 0 2.4rem;
+        margin: 2.4rem;
         line-height:2.8rem;
         background:hsla(237, 17%, 21%, 0.08);
         font-weight:600;
@@ -60,9 +75,13 @@ footer, .header__button {
         border-radius: 5px;
     }
 
-    &__nav-item:last-child &__nav-item-list {
-        display: block;
+    &__nav-item-list-display {
+        display:block;
     }
+
+/*     &__nav-item:last-child &__nav-item-list {
+        display: block;
+    } */
 
     &__nav-item-list li {
         list-style: none;

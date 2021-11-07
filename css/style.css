@@ -182,6 +182,9 @@ footer, .header__button {
   border-radius: 0px 0px 0px 100px;
   padding: 5.6rem 0 15.6rem;
   color: white;
+  /*     &__nav-item:last-child &__nav-item-list {
+        display: block;
+    } */
 }
 
 .header__site-logo {
@@ -213,16 +216,37 @@ footer, .header__button {
   padding: 2.4rem 0 3.2rem;
 }
 
+.header__nav-item {
+  margin-bottom: 2.4rem;
+}
+
+.header__nav-item-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__nav-item-arrow {
+  position: relative;
+  top: -2px;
+}
+
 .header__nav-item-heading {
   font-size: 1.8rem;
   font-weight: 600;
-  margin-bottom: 2.4rem;
   line-height: 2.8rem;
+  margin-right: 0.8rem;
 }
 
 .header__nav-item-list {
   display: none;
-  margin: 0 2.4rem;
+  margin: 2.4rem;
   line-height: 2.8rem;
   background: rgba(44, 45, 63, 0.08);
   font-weight: 600;
@@ -230,7 +254,7 @@ footer, .header__button {
   border-radius: 5px;
 }
 
-.header__nav-item:last-child .header__nav-item-list {
+.header__nav-item-list-display {
   display: block;
 }
 
