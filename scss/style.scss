@@ -83,10 +83,6 @@ footer, .header__button {
         border-radius: 5px;
     }
 
-/*     &__nav-item:last-child &__nav-item-list {
-        display: block;
-    } */
-
     &__nav-item-list-display li {
         list-style: none;
         margin-bottom:1.2rem;
@@ -159,3 +155,101 @@ footer, .header__button {
 .container {
     padding:0 2.4rem;
 }
+
+.main {
+    margin:10rem 0;
+}
+
+.content-main {
+
+    &__heading {
+        font-size:2.8rem;
+        font-weight:600;
+        line-height:3.2rem;
+        padding: 0 0.9rem;
+    }
+
+    &__paragraph {
+        line-height: 2.8rem;
+        letter-spacing: 0.5px;
+        padding: 0 0.9rem;
+        margin:1.6rem 0 4rem;
+    }
+
+    &__image img {
+        margin: 3.8rem 0 4.6rem;
+    }
+}
+
+.content-other {
+    background: linear-gradient(135deg, #2D2E40 0%, #3F4164 100%), url(../images/bg-pattern-circles.svg) no-repeat;
+    background-size: 160%;
+    background-position-x: center;
+    background-position-y: -850%;
+    background-blend-mode: hue;
+    border-radius: 0px 100px;
+    padding:22.1rem 0 10.9rem;
+    color:$color-text-other;
+    position:relative;
+    margin-top:27.3rem;
+
+    &__heading {
+        font-size:4rem;
+        letter-spacing: -1.2px;
+        line-height:6.1rem;
+    }
+
+    &__paragraph {
+        font-weight:400;
+        line-height:2.8rem;
+        letter-spacing: 0.5px;
+        margin-top:1rem;
+    }
+
+    img {
+        position:absolute;
+    }
+
+    &__image-primary {
+        top:-180px;
+        left:0;
+    }
+
+}
+
+.footer {
+    background:$background-footer;
+    color:$color-text-footer;
+    border-radius: 0px 100px 0px 0px;
+    padding:7.5rem 2.4rem;
+    font-size:1.8rem;
+    line-height:3.3rem;
+
+    &__site-logo {
+        margin-bottom:7.2rem;
+    }
+
+    &__heading {
+        font-weight:500;
+        margin-bottom:2.1rem;
+    }
+
+    &__links {
+        margin-bottom:4rem;
+    }
+
+    &__links:last-child {
+        margin-bottom:0;
+    }
+
+    &__links ul li {
+        list-style: none;
+    }
+
+    &__links ul li a {
+        color:$color-text-footer;
+        font-weight:400;
+        opacity:0.75;
+    }
+}
+
