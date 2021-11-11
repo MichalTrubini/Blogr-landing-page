@@ -23,7 +23,8 @@
           <div class="header__nav-item">
             <div class="header__nav-item-header">
               <p class="header__nav-item-heading">Product</p>
-              <img src="images/icon-arrow-dark.svg" alt="" class="header__nav-item-arrow">
+              <img src="images/icon-arrow-dark.svg" alt="arrow" class="header__nav-item-arrow">
+              <img src="images/icon-arrow-light.svg" alt="arrow" class="header__nav-item-arrow-light">
             </div>
             <ul class="header__nav-item-list">
               <li><a href="#">Overview</a></li>
@@ -36,7 +37,8 @@
           <div class="header__nav-item">
             <div class="header__nav-item-header">
               <p class="header__nav-item-heading">Company</p>
-              <img src="images/icon-arrow-dark.svg" alt="" class="header__nav-item-arrow">
+              <img src="images/icon-arrow-dark.svg" alt="arrow" class="header__nav-item-arrow">
+              <img src="images/icon-arrow-light.svg" alt="arrow" class="header__nav-item-arrow-light">
             </div>
             <ul class="header__nav-item-list">
               <li><a href="#">About</a></li>
@@ -48,7 +50,8 @@
           <div class="header__nav-item">
             <div class="header__nav-item-header">
               <p class="header__nav-item-heading">Connect</p>
-              <img src="images/icon-arrow-dark.svg" alt="" class="header__nav-item-arrow">
+              <img src="images/icon-arrow-dark.svg" alt="arrow" class="header__nav-item-arrow">
+              <img src="images/icon-arrow-light.svg" alt="arrow" class="header__nav-item-arrow-light">
             </div>
             <ul class="header__nav-item-list">
               <li><a href="#">Contact</a></li>
@@ -77,51 +80,55 @@
   </header>
 
   <main class="main">
-    <section class="content-main container">
-      <h2 class="content-main__heading">
+    <section class="content-main content-main-primary container">
+      <h2 class="content-main__heading content-main__heading-dt">
         Designed for the future
       </h2>
-      <div class="content-main__image">
-        <img src="images/illustration-editor-mobile.svg" alt="Designed for future" class="">
-      </div>
-      <div class="content-main__content">
-        <h2 class="content-main__heading">
-          Introducing an extensible editor
-        </h2>
-        <p class="content-main__paragraph">
-          Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
-          The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
-          videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
-          change the looks of a blog.
-        </p>
-      </div>
-      <div class="content-main__content">
-        <h2 class="content-main__heading">
-          Robust content management
-        </h2>
-        <p class="content-main__paragraph">
-          Flexible content management enables users to easily move through posts. Increase the usability of your blog 
-          by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
-        </p>
+      <div class="content-main__items content-main__items-left">
+        <div class="content-main__image">
+          <img src="images/illustration-editor-mobile.svg" alt="Designed for future">
+        </div>
+        <div class="content-main__content">
+          <h2 class="content-main__heading">
+            Introducing an extensible editor
+          </h2>
+          <p class="content-main__paragraph">
+            Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+            The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+            videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+            change the looks of a blog.
+          </p>
+          <h2 class="content-main__heading">
+            Robust content management
+          </h2>
+          <p class="content-main__paragraph">
+            Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+            by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+          </p>
+        </div>
       </div>
     </section>
     <section class="content-other">
-
-<!--       <img src="images/bg-pattern-circles.svg" alt="circles" class="content-other__image-primary"> -->
-      <img src="images/illustration-phones.svg" alt="phones" class="content-other__image-primary">
-      <h2 class="content-other__heading container">
-        State of the Art Infrastructure
-      </h2>
-      <p class="content-other__paragraph container">
-        With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
-        This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
-      </p>
+      <div class="content-other__wrapper">
+        <div class="content-other__image-wrapper">      
+          <img src="images/illustration-phones.svg" alt="phones" class="content-other__image-primary">
+        </div>
+        <div class="content-other__wrapper-text">
+          <h2 class="content-other__heading container">
+            State of the Art Infrastructure
+          </h2>
+          <p class="content-other__paragraph container">
+            With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+            This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+          </p>
+        </div>
+      </div>
     </section>
-    <section class="content-main container">
+    <section class="content-main content-main-secondary container">
       <div class="content-main__image">
         <img src="images/illustration-laptop-mobile.svg" alt="laptop">
       </div>
-      <div class="content-main__content">
+      <div class="content-main__items content-main__items-right">
         <h2 class="content-main__heading">
           Free, open, simple
         </h2>
@@ -130,8 +137,6 @@
           features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
           and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
         </p>
-      </div>
-      <div class="content-main__content">
         <h2 class="content-main__heading">
           Powerful tooling
         </h2>
