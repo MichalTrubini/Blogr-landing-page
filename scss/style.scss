@@ -1,9 +1,5 @@
 @import 'normalize','settings','variables';
 
-* {
-    outline: 1px solid #f00 !important;
-  }
-
 body {
     font-family: 'Overpass', sans-serif;
     text-align: center;
@@ -69,6 +65,16 @@ footer, .header__button {
         top:-2px;
     }
 
+    &__nav-item-arrow-animation-up{
+        transform: rotate(-180deg);
+        transition-duration: 0.75s;
+    }
+
+    &__nav-item-arrow-animation-down{
+        transform: rotate(0deg);
+        transition-duration: 0.75s;
+    }
+
     &__nav-item-heading {
         
         font-size:1.8rem;
@@ -83,12 +89,19 @@ footer, .header__button {
 
     &__nav-item-list-display {
         display:block;
+        animation: 0.75s ease 0s normal forwards 1 fadein;
         margin: 2.4rem;
         line-height:2.8rem;
         background:hsla(237, 17%, 21%, 0.08);
         font-weight:600;
         padding:1.7rem 0 1.3rem;
         border-radius: 5px;
+    }
+
+    @keyframes fadein{
+        0% { opacity:0; }
+    
+        100% { opacity:1; }
     }
 
     &__nav-item-list-display li {
@@ -370,6 +383,34 @@ footer, .header__button {
         &__button--secondary:hover {
             background:white;
             color:$Very-light-red;
+        }
+
+        &__nav-item-heading {
+            font-size:1.6rem;
+            font-weight: 700;
+            opacity:0.75;
+        }
+
+        &__nav-item-list {
+            display: block;
+            position: absolute;
+            background: white;
+            border-radius: 5px;
+            padding:2.4rem;
+            width:16.8rem;
+            margin-top:2.7rem;
+        }
+
+        &__nav-item-list li {
+            list-style: none;
+            text-align: left;
+            line-height: 3.3rem;
+        }
+
+        &__nav-item-list li a {
+            color:$color-text-menu-selected-dt;
+            font-size: 1.5rem;
+            font-weight: 400;
         }
     }
 
