@@ -568,26 +568,37 @@ footer, .header__button {
   .header__nav-item-heading {
     font-size: 1.6rem;
     font-weight: 700;
+    line-height: 1.8rem;
     opacity: 0.75;
+    cursor: pointer;
   }
-  .header__nav-item-list {
+  .header__nav-item-heading:hover {
+    opacity: 1;
+    border-bottom: 1px solid white;
+  }
+  .header__nav-item-list-dt-display {
     display: block;
     position: absolute;
     background: white;
+    -webkit-box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.243444);
+            box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.243444);
     border-radius: 5px;
     padding: 2.4rem;
     width: 16.8rem;
     margin-top: 2.7rem;
   }
-  .header__nav-item-list li {
+  .header__nav-item-list-dt-display li {
     list-style: none;
     text-align: left;
     line-height: 3.3rem;
   }
-  .header__nav-item-list li a {
+  .header__nav-item-list-dt-display li a {
     color: #2c2d3f;
     font-size: 1.5rem;
     font-weight: 400;
+  }
+  .header__nav-item-list-dt-display li a:hover {
+    font-weight: 700;
   }
   .content-main {
     max-width: 144rem;

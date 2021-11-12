@@ -388,29 +388,41 @@ footer, .header__button {
         &__nav-item-heading {
             font-size:1.6rem;
             font-weight: 700;
+            line-height: 1.8rem;
             opacity:0.75;
+            cursor: pointer;
         }
 
-        &__nav-item-list {
+        &__nav-item-heading:hover {
+            opacity: 1;
+            border-bottom:1px solid white;
+        }
+
+        &__nav-item-list-dt-display {
             display: block;
             position: absolute;
             background: white;
+            box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.243444);
             border-radius: 5px;
             padding:2.4rem;
             width:16.8rem;
             margin-top:2.7rem;
         }
 
-        &__nav-item-list li {
+        &__nav-item-list-dt-display li {
             list-style: none;
             text-align: left;
             line-height: 3.3rem;
         }
 
-        &__nav-item-list li a {
+        &__nav-item-list-dt-display li a {
             color:$color-text-menu-selected-dt;
             font-size: 1.5rem;
             font-weight: 400;
+        }
+
+        &__nav-item-list-dt-display li a:hover {
+            font-weight: 700;
         }
     }
 

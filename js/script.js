@@ -1,26 +1,3 @@
-/* const menuHeader = document.querySelectorAll('.header__nav-item');
-const menuHamburger = document.querySelector('.header__nav-hamburger');
-
-
-menuHeader.forEach(rollSubMenu);
-menuHamburger.addEventListener('click',toggleMenu);
-
-function rollSubMenu (item) {
-    item.addEventListener('click',function(){
-
-        const menuHide = document.querySelector('ul:not(.header__nav-item-list)');
-        if (menuHide) menuHide.className = 'header__nav-item-list';
-
-        const listRoll = item.children[1];
-        if (listRoll.className === 'header__nav-item-list'){
-            listRoll.className = 'header__nav-item-list-display'
-        }
-        else {
-            listRoll.className = 'header__nav-item-list'
-        };
-    })
-} */
-
 const menu = document.querySelector('.header__nav-menu');
 const menuHamburger = document.querySelector('.header__nav-hamburger');
 
@@ -37,25 +14,27 @@ function toggleMenu(){
 
 const elements = document.querySelectorAll('.header__nav-item');
 
+elements.forEach(rollSubMenuMb);
+elements.forEach(rollSubMenuDt);
+elements.forEach(mouseLeaveDt);
 
-elements.forEach(rollSubMenu);
-
-function rollSubMenu(element) {
+function rollSubMenuMb(element) {
     let subMenuHeader = element.firstElementChild;
     let subMenu = element.lastElementChild;
     let subMenus = document.querySelectorAll('.header__nav-item-list');
     let arrowAnimated = element.querySelector('.header__nav-item-arrow');
+    let screenWidth = 1059;
 
     subMenuHeader.addEventListener('click',function(){
         subMenus.forEach(subms => {
-            if (subMenu !== subms && screen.width < 1100) {
+            if (subMenu !== subms && screen.width < screenWidth) {
                 subms.classList.remove('header__nav-item-list-display');
             }
         });
 
-        if (screen.width < 1100) subMenu.classList.toggle('header__nav-item-list-display');
+        if (screen.width < screenWidth) subMenu.classList.toggle('header__nav-item-list-display');
 
-        if (arrowAnimated.className === 'header__nav-item-arrow-animation-up' && screen.width < 1100) {
+        if (arrowAnimated.className === 'header__nav-item-arrow-animation-up' && screen.width < screenWidth) {
             arrowAnimated.classList.remove('header__nav-item-arrow-animation-up')
             arrowAnimated.classList.add('header__nav-item-arrow-animation-down');
         }
@@ -64,5 +43,45 @@ function rollSubMenu(element) {
         };
 
 
+    })
+}
+
+function rollSubMenuDt(element) {
+    let subMenuHeader = element.firstElementChild;
+    let subMenu = element.lastElementChild;
+    let subMenus = document.querySelectorAll('.header__nav-item-list');
+    let arrowAnimatedLight = element.querySelector('.header__nav-item-arrow-light');
+    let screenWidth = 1100;
+
+    subMenuHeader.addEventListener('mouseenter',function(){
+        subMenus.forEach(subms => {
+            if (subMenu !== subms && screen.width > screenWidth) {
+                subms.classList.remove('header__nav-item-list-dt-display');
+            }
+        });
+
+        if (screen.width > screenWidth) {
+            subMenu.classList.add('header__nav-item-list-dt-display');
+        };
+
+        if (arrowAnimatedLight.className === 'header__nav-item-arrow-light-animation-up' && screen.width > screenWidth) {
+            arrowAnimatedLight.classList.remove('header__nav-item-arrow-light-animation-up')
+            arrowAnimatedLight.classList.add('header__nav-item-arrow-light-animation-down');
+        }
+        else {
+            arrowAnimatedLight.className = 'header__nav-item-arrow-light-animation-up'
+        };
+    })
+}
+
+function mouseLeaveDt(element) {
+
+    let subMenu = element.lastElementChild;
+    let screenWidth = 1100;
+
+    subMenu.addEventListener('mouseleave',function(){
+
+        if (screen.width > screenWidth) subMenu.classList.remove('header__nav-item-list-dt-display');
+        console.log(screenWidth);
     })
 }
